@@ -1,49 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React, { Component } from 'react';
+import {View,Text,StyleSheet } from 'react-native';
+import { Todo } from './src/app/Todo';
+import { Fancy } from './src/app/Fancy';
+import { Reddit } from './src/app/Reddit';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,TextInput,SafeAreaView} from 'react-native';
-import {Todo} from "./src/app/Todo";
-import {Fancy} from "./src/app/Fancy";
+export default class App extends Component{
 
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  constructor() {
-      super()
-      this.state = {
-          todos: ['REACT NATIVE', 'Javascript', 'React']
-,
-          newTodo:''
-      }
-
-  }
-
-    handleChange(e){
-    const {value}=e.target;
-    this.setState({newTodo:value})
-    }
-
-  render() {
-    return (
-
-<SafeAreaView>
-<Todo/>
-</SafeAreaView>
-
-    );
+  render(){
+    return(
+  <Todo/>
+    )
   }
 }
 
@@ -65,3 +31,4 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+

@@ -1,32 +1,20 @@
-import React,{Component} from 'react';
-import {View,StyleSheet,Text,SafeAreaView} from 'react-native';
+import React, {Component} from 'react';
+import {
+  View,
+  Text,
+  Dimensions
+} from 'react-native';
 
-export class Fancy extends Component{
-    constructor(){
-        super();
-
-    }
-
-    render(){
-
-        return(
-
-            <SafeAreaView style={styles.container}>
-                <Text>
-                Style
-                </Text>
-            </SafeAreaView>
-        )
-    }
-
+import { styles } from './styles';
+export class Fancy extends Component {
+  render() {
+    return(
+      <View style={styles.container}>
+        <View style={styles.box}>
+          
+        </View>
+        <Text style={styles.text}>Fancy</Text>
+      </View>
+    )
+  }
 }
-
-const styles=StyleSheet.create(
-    {
-        container:{
-                    flex:1,
-            backgroundColor:'powderblue'
-        }
-    }
-
-)
