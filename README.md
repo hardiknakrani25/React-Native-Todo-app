@@ -4,6 +4,9 @@ Terminal 1
 
 $ npm install
 $ npm start
+
+
+
 Terminal 2
 
 $ json-server db.json
